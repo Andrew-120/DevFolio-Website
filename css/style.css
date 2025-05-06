@@ -1,0 +1,564 @@
+/*................. Start Global Rules .................*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../webfonts/Roboto-Regular.woff), format("woff");
+  src: url(../webfonts/Roboto-Regular.woff2), format("woff2");
+  src: url(../webfonts/Roboto-Regular.ttf), format("truetype");
+}
+
+:root {
+  --main-font: "system-ui";
+  --main-color: #0078ff;
+  --main-color-rgb: 0, 120, 255;
+  --second-color: #4e4e4e;
+  --second-color-rgb: 78, 78, 78;
+  --black-color: #1e1e1e;
+  --black-color-rgb: 30, 30, 30;
+  --white-color: #ffffff;
+  --white-color-rgb: 255, 255, 255;
+  --light-color: #f5f5f5;
+  --light-color-rgb: 245, 245, 245;
+}
+
+body {
+  font-family: var(--main-font), "Roroboto", sans-serif;
+  font-weight: 600;
+  background-color: var(--light-color);
+}
+
+.heading-title {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+}
+.p-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.section-title .p-title::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay {
+  background-color: var(--main-color);
+  opacity: 0.7;
+}
+
+/*................. End Global Rules .................*/
+
+/*................. Start Overriding Bootstrap .................*/
+.text-primary {
+  --bs-primary-rgb: var(--main-color-rgb);
+}
+.text-secondary {
+  --bs-secondary-rgb: var(--second-color-rgb);
+}
+.text-dark {
+  --bs-dark-rgb: var(--black-color-rgb);
+}
+.bg-light {
+  --bs-light-rgb: var(--light-color-rgb);
+}
+.bg-primary {
+  --bs-primary-rgb: var(--main-color-rgb);
+}
+.main-font {
+  font-family: var(--main-font), "Roroboto", sans-serif;
+  font-weight: 600;
+}
+/*................. End Overriding Bootstrap .................*/
+
+/*................. Start Navbar .....................*/
+nav .main-nav {
+  background-color: rgba(0, 0, 0) !important;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  position: relative;
+  text-transform: uppercase;
+}
+nav .navbar li:hover > a:before,
+nav .navbar .active:before {
+  visibility: visible;
+  width: 80%;
+}
+
+/*................. End Navbar .....................*/
+
+/*................. Start Header .................*/
+#home {
+  background-image: url(../images/header-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#home .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+#home .header-content h1 {
+  font-size: 2.4rem;
+  line-height: 3.625rem;
+}
+#home .header-content p {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+#home .header-content .annimation::after {
+  content: "|";
+  animation: typing 8s infinite;
+}
+
+@keyframes typing {
+  0% {
+    content: "D|";
+  }
+  1.35% {
+    content: "De|";
+  }
+  2.7% {
+    content: "Des|";
+  }
+  4.05% {
+    content: "Desi|";
+  }
+  5.4% {
+    content: "Desig|";
+  }
+  6.75% {
+    content: "Design|";
+  }
+  8.1% {
+    content: "Designe|";
+  }
+  9.45% {
+    content: "Designer|";
+  }
+  10.8% {
+    content: "Designe|";
+  }
+  12.15% {
+    content: "Design|";
+  }
+  13.5% {
+    content: "Desig|";
+  }
+  14.85% {
+    content: "Desi|";
+  }
+  16.2% {
+    content: "Des|";
+  }
+  17.55% {
+    content: "De|";
+  }
+  18.9% {
+    content: "Dev|";
+  }
+  20.25% {
+    content: "Deve|";
+  }
+  21.6% {
+    content: "Devel|";
+  }
+  22.95% {
+    content: "Develo|";
+  }
+  24.3% {
+    content: "Develop|";
+  }
+  25.65% {
+    content: "Develope|";
+  }
+  27% {
+    content: "Developer|";
+  }
+  28.35% {
+    content: "Develope|";
+  }
+  29.7% {
+    content: "Develop|";
+  }
+  31.05% {
+    content: "Develo|";
+  }
+  32.4% {
+    content: "Devel|";
+  }
+  33.75% {
+    content: "Deve|";
+  }
+  35.1% {
+    content: "Dev|";
+  }
+  36.45% {
+    content: "De|";
+  }
+  37.8% {
+    content: "D|";
+  }
+  39.15% {
+    content: "|";
+  }
+  40.5% {
+    content: "F|";
+  }
+  41.85% {
+    content: "Fr|";
+  }
+  43.2% {
+    content: "Fre|";
+  }
+  44.55% {
+    content: "Free|";
+  }
+  45.9% {
+    content: "Freel|";
+  }
+  47.25% {
+    content: "Freela|";
+  }
+  48.6% {
+    content: "Freelan|";
+  }
+  49.95% {
+    content: "Freelanc|";
+  }
+  51.3% {
+    content: "Freelance|";
+  }
+  52.65% {
+    content: "Freelancer|";
+  }
+  54% {
+    content: "Freelance|";
+  }
+  55.35% {
+    content: "Freelanc|";
+  }
+  56.7% {
+    content: "Freelan|";
+  }
+  58.05% {
+    content: "Freela|";
+  }
+  59.4% {
+    content: "Freel|";
+  }
+  60.75% {
+    content: "Free|";
+  }
+  62.1% {
+    content: "Fre|";
+  }
+  63.45% {
+    content: "Fr|";
+  }
+  64.8% {
+    content: "F|";
+  }
+  66.15% {
+    content: "|";
+  }
+  67.5% {
+    content: "P|";
+  }
+  68.85% {
+    content: "Ph|";
+  }
+  70.2% {
+    content: "Pho|";
+  }
+  71.55% {
+    content: "Phot|";
+  }
+  72.9% {
+    content: "Photo|";
+  }
+  74.25% {
+    content: "Photog|";
+  }
+  75.6% {
+    content: "Photogr|";
+  }
+  76.95% {
+    content: "Photogra|";
+  }
+  78.3% {
+    content: "Photograp|";
+  }
+  79.65% {
+    content: "Photograph|";
+  }
+  81% {
+    content: "Photographe|";
+  }
+  82.35% {
+    content: "Photographer|";
+  }
+  83.7% {
+    content: "Photographe|";
+  }
+  65.05% {
+    content: "Photograph|";
+  }
+  86.4% {
+    content: "Photograp|";
+  }
+  87.75% {
+    content: "Photogra|";
+  }
+  89.1% {
+    content: "Photogr|";
+  }
+  90.45% {
+    content: "Photog|";
+  }
+  91.8% {
+    content: "Photo|";
+  }
+  93.15% {
+    content: "Phot|";
+  }
+  94.5% {
+    content: "Pho|";
+  }
+  95.85% {
+    content: "Ph|";
+  }
+  97.2% {
+    content: "P|";
+  }
+  100% {
+    content: "|";
+  }
+}
+/*................. End Header .................*/
+
+/*................. Start About .................*/
+#about.skill-item .progress {
+  height: 0.2rem;
+}
+#about h2::after {
+  content: "";
+  width: 25%;
+  height: 0.1875rem;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+/*................. End About .................*/
+
+/*................. Start Services .................*/
+#services .card-content h3 {
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
+  font-weight: 500;
+}
+#services .card .circle {
+  transition: all 0.5s ease-in-out;
+}
+#services .card:hover .circle {
+  opacity: 0.35;
+}
+#services .card .icon {
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  position: relative;
+}
+#services .card:hover .icon {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 50%;
+}
+/*................. End Services .................*/
+
+/*................. Start Count .................*/
+#count {
+  background-image: url(../images/services-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#count .count-icon .circle {
+  color: #cde1f8 !important;
+}
+#count .count-number {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+/*................. End Count .................*/
+
+/*................. Start Portfolio .................*/
+#portfolio .card img {
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+#portfolio .card:hover img {
+  transform: scale(1.1);
+}
+#portfolio .card .card-title {
+  font-size: 1.1875rem;
+  line-height: 1.4375rem;
+  font-weight: 500;
+}
+#portfolio .carrd-tags .sp {
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  font-weight: 400;
+}
+/*................. End Portfolio .................*/
+
+/*................. Start Testimonials .................*/
+#testimonials {
+  background-image: url(../images/contact-testimonial-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#testimonials .carousel-indicators [data-bs-target] {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  text-indent: unset;
+}
+#testimonials .carousel-item img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+#testimonials .carousel-item .img2 {
+  width: 7.5rem;
+  height: 9.375rem;
+}
+/*................. End Testimonials .................*/
+
+/*................. Start Blog .................*/
+#blog .card img {
+  cursor: pointer;
+}
+#blog .card .card-title {
+  font-size: 1.3125rem;
+  line-height: 1.5625rem;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}
+#blog .card .card-title:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+#blog .card-footer .footer-content img {
+  width: 2rem;
+  height: 2rem;
+}
+/*................. End Blog .................*/
+
+/*................. Start Contact .................*/
+#contact {
+  background-image: url(../images/contact-testimonial-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#contact .card h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 500;
+}
+#contact .card h2::after {
+  content: "";
+  width: 20%;
+  height: 0.1875rem;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 3rem;
+}
+
+#contact .card h2 .gt::after {
+  content: "";
+  width: 18%;
+  height: 0.1875rem;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 3rem;
+}
+/*................. End Contact .................*/
+
+/*................. Start Footer .................*/
+footer {
+  background-color: #1d70da;
+  color: var(--white-color);
+}
+/*................. End Footer .................*/
+
+/* .................Start Media Query ................. */
+/* Small Screen */
+@media screen and (min-width: 576px) {
+  #about h2::after {
+    content: "";
+    width: 20%;
+  }
+}
+/* Medium Screen */
+@media screen and (min-width: 768px) {
+  #home .header-content h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+  #home .header-content p {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+  }
+
+  #about h2::after {
+    content: "";
+    width: 30%;
+  }
+}
+/* Large Screen */
+@media screen and (min-width: 992px) {
+  #about h2::after {
+    content: "";
+    width: 23%;
+  }
+}
+
+/* Extra Large Screen */
+@media screen and (min-width: 1200px) {
+  #about h2::after {
+    content: "";
+    width: 20.5%;
+  }
+}
+
+/* .................End Media Query ................. */
